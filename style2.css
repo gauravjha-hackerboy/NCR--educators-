@@ -1,0 +1,248 @@
+/* ----------------------------------
+    testing css enqiry
+-------------------------------------*/
+.enquiry-form {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 999;
+  width: 300px;
+}
+
+.enquiry-form.show {
+  display: block;
+}
+
+.enquiry-form h2 {
+  margin-top: 0;
+  font-family: sans-serif;
+}
+
+.enquiry-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.enquiry-form label {
+  margin-bottom: 5px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.enquiry-form button[type="submit"] {
+  background-color: #2baa04;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.enquiry-form button[type="submit"]:hover {
+  background-color: #22b957;
+}
+
+.enquiry-form .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Button */
+.enquiry-form-trigger {
+  position: fixed;
+  margin-left: 95%;
+  margin-top: 50% !important;
+  margin-right: 0%;
+  transform: rotate(-270deg);
+  /* height: 50px;
+  width: 68px; */
+  padding: 3px 1pc;
+  border-radius: 10px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #5fcf80;
+  z-index: 999;
+}
+.enquiry-form-trigger{
+  font-family: sans-serif;
+}
+
+/* media query for the form */
+@media (max-width: 768px) {
+  .enquiry-button {
+    flex-direction: column;
+    align-items: center;
+  }
+  .enquiry-form {
+    width: 90%;
+    margin-left: 5px; 
+  }
+
+  .enquiry-form-trigger{
+    margin-left: 100%;
+    margin-top: 50% !important;
+    margin-right: 0%;
+    position: fixed;
+  }
+}
+
+
+/* flexbox for aligning buttons vertically */
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 999;
+  top: 40%;
+  margin-left: 9px;
+}
+
+/* social media button style */
+.social-media a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: #5fcf80;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  /* z-index: 99999; */
+}
+
+/* media queries for responsiveness */
+@media screen and (max-width: 767px) {
+
+  /* change flex-direction to row for smaller screens */ 
+  /* .social-media {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-top: 90%;
+
+  } */
+
+  /* adjust margin for horizontal spacing */
+  .social-media a {
+      margin-right: 10px;
+      margin-bottom: 10px;
+  }
+}
+
+
+/* -----------------------------------------------
+experimented for slider
+-------------------------------------------------*/
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease;
+}
+
+.slider-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+  /* background: rgba(0, 0, 0, 0.4); */
+
+.slider-item img {
+  width: 100%;
+  height: auto;
+  opacity:  0.5;
+}
+
+.slider-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 80%; */
+  width: 100%;
+  height: 100%;
+  max-height: auto;
+  max-width: 800px;
+  color: #faf9f9;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-caption h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.slider-caption p {
+  font-size: 1.2rem;
+}
+
+.slider-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-arrow {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.slider-arrow:hover {
+  color: #ccc;
+}
+
+.slider-arrow-prev {
+  margin-left: 20px;
+}
+
+.slider-arrow-next {
+  margin-right: 20px;
+}
+
+/* course image */
+.courses .course-item .frame img{
+  height: 316px;
+  width: 474px;
+}
+
+.courses .course-item1 .frame img{
+  height: 316px;
+  width: 474px;
+}
